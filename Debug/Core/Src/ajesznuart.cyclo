@@ -1,0 +1,6 @@
+../Core/Src/ajesznuart.c:11:6:init_uart	1
+../Core/Src/ajesznuart.c:26:6:send	2
+../Core/Src/ajesznuart.c:31:6:get	2
+../Core/Src/ajesznuart.c:38:6:hal_gpios_init	7
+../Core/Src/ajesznuart.c:61:5:print_int	3
+../Core/Src/ajesznuart.c:78:5:uprintf	10

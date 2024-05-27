@@ -1,0 +1,6 @@
+../Core/Src/ajesznuart.c:11:6:init_uart	8	static
+../Core/Src/ajesznuart.c:26:6:send	16	static
+../Core/Src/ajesznuart.c:31:6:get	4	static
+../Core/Src/ajesznuart.c:38:6:hal_gpios_init	24	static
+../Core/Src/ajesznuart.c:61:5:print_int	24	static
+../Core/Src/ajesznuart.c:78:5:uprintf	72	static

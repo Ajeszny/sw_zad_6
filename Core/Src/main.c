@@ -63,6 +63,21 @@ static void MX_LPUART1_UART_Init(void);
   * @brief  The application entry point.
   * @retval int
   */
+
+char case_change(char c) {
+	if (islower(c)) {
+		return toupper(c);
+	}
+	if (isupper(c)) {
+		return (tolower(c));
+	}
+	return c;
+}
+
+void send_case_changed(char c) {
+	send(case_change(c));
+}
+
 int main(void)
 {
 
@@ -96,11 +111,24 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   uprintf("Hello world!\n\r");
+  queue q;
+  q.head = 0;
+  q.tail = 0;
+  q.size = 0;
 
   while (1)
   {
     /* USER CODE END WHILE */
-	  send(get());
+	  char c = get();
+	  if (c == '/') {
+		  flush(&q, send_case_changed);
+		  continue;
+	  }
+	  if (q.size == 5) {
+		  uprintf("Queue is full!");
+		  continue;
+	  }
+	  push(&q, &c, sizeof(char));
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

@@ -1,0 +1,4 @@
+../Core/Src/ajesznqueue.c:9:8:pop	24	static
+../Core/Src/ajesznqueue.c:20:6:push	32	static
+../Core/Src/ajesznqueue.c:39:5:free_node	24	static
+../Core/Src/ajesznqueue.c:45:6:flush	24	static

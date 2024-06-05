@@ -1,5 +1,7 @@
-../Core/Src/main.c:66:5:main	1
-../Core/Src/main.c:113:6:SystemClock_Config	4
-../Core/Src/main.c:158:13:MX_LPUART1_UART_Init	2
-../Core/Src/main.c:192:13:MX_GPIO_Init	1
-../Core/Src/main.c:212:6:Error_Handler	1
+../Core/Src/main.c:67:6:case_change	5
+../Core/Src/main.c:77:6:send_case_changed	1
+../Core/Src/main.c:81:5:main	3
+../Core/Src/main.c:141:6:SystemClock_Config	4
+../Core/Src/main.c:186:13:MX_LPUART1_UART_Init	2
+../Core/Src/main.c:220:13:MX_GPIO_Init	1
+../Core/Src/main.c:240:6:Error_Handler	1

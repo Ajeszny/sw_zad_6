@@ -14,11 +14,11 @@ void init_uart() {
 
 	GPIO_PIN_C->AFR[0] |= (1 << 7) | (1 << 3);
 
-	hal_gpios_init(GPIO_PIN_C, 0b0|0b10, ALTUSHKA);
+	hal_gpios_init(GPIO_PIN_C, 0b1|0b10, ALTUSHKA);
 
 	UART->LPUART_BRR = BLACK_MAGIC;
-	//UART->LPUART_RQR |= (1 << 3);
-	UART->LPUART_CR1 |= (1 << 3)|(1 << 2)|(1 << 0);
+	UART->LPUART_CR1 |= (1 << 3)|(1 << 2);
+	UART->LPUART_CR1 |= (1 << 0);
 
 
 }
@@ -29,7 +29,7 @@ void send(char c) {
 }
 
 char get(void) {
-	while (!(UART->LPUART_ISR & (1 << 5)));
+	while ((UART->LPUART_ISR & (0x1UL << (5U))) == 0);
 	return UART->LPUART_RDR;
 }
 
